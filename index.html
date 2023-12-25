@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <h1>My Todo List</h1>
+    </header>
+    <main>
+        <div id="card">
+            <div id="input-box-wrapper">
+                <input type="text" id="input-box" placeholder="Enter your task ..." class="input">
+                <img src="./images/add.png" alt="Add to todo" srcset="" height="30px" class="input" id="add-btn">
+            </div>
+            <div id="select-task-type">
+                <button type="button" class="task-type-btn" id="all-task-btn">All</button>
+                <button type="button" class="task-type-btn" id="complete-task-btn">Complete</button>
+                <button type="button" class="task-type-btn" id="incomplete-task-btn">Incomplete</button>
+            </div>
+            <div id="list-cointainer-wrapper">
+                <ul id="list-cointainer">
+                </ul>
+            </div>
+            <div class="card-footer">
+                <div id="task-count"> Task Count: 0 </div>
+                <div id="completed-task-count"> Completed Task: 0</div>
+                <div id="incomplete-task-count"> Incomplete Task: 0</div>
+            </div>
+            <div id="toast-container" class="hidden">
+                <div id="toast">This is a toast message!</div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

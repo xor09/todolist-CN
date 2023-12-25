@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(37, 35, 35);
+    height: 100dvh;
+}
+
+#card {
+    margin-top: 100px;
+    height: max-content;
+    background-image: url('./images/paper-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px 10px 0px 10px;
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#input-box-wrapper {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#input-box {
+    border-radius: 10px;
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    border: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+input{
+    margin: 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#add-btn, .delete-btn, .check-btn{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#list-cointainer-wrapper {
+    width: 500px;
+}
+
+#list-cointainer {
+    max-height: 50vh;
+    margin: 20px 10px;
+    padding: 10px 20px;
+    background-color: rgb(198, 200, 204, 0.4);
+    border-radius: 10px;
+    overflow-y: scroll;
+    
+}
+
+#list-cointainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+li {
+    list-style: none;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+li:hover {
+    color: white;
+    background-color: rgb(121, 36, 121, 0.5);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(48, 114, 12);
+    transition: color 0.3s ease-in-out;
+}
+
+.todo-text-container {
+    width: 400px;
+    max-width: 70%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    transition: max-width 0.3s ease-in-out;
+}
+
+.card-footer {
+    padding: 10px 20px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    font-size: small;
+    color: rgb(108, 107, 107);
+    transition: color 0.3s ease-in-out;
+    border-top: 3px solid rgb(221, 217, 217);
+}
+
+#select-task-type{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: inherit;
+}
+
+.task-type-btn {
+    width: 90px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.task-type-btn:hover{
+    cursor: pointer;
+}
+
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 0%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: display 0.5s ease-in-out;
+}
+
+#toast {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
