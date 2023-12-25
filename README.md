@@ -49,7 +49,7 @@ This is a simple web-based todo list application designed to help users manage t
 
 ### Video Explanation:
 
-- A concise [video explanation](link_to_video) is available, demonstrating how the project was approached, the implemented features, and an overview of the final product.
+- A concise [video explanation](https://drive.google.com/file/d/1MJ-hF3glonDIlp-mT9ah_tSmgmIG3NQP/view?usp=sharing) is available, demonstrating how the project was approached, the implemented features, and an overview of the final product.
 
 ### Conclusion:
 
