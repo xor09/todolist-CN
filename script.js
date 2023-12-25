@@ -92,7 +92,7 @@ function createElement(task, type){
 function deleteItem(id){
     tasks = tasks.filter((task)=> task.id !== id );
     printItemsToList();
-    showToast('Item deleted successfully', 'green')
+    showToast('Item deleted successfully', 'red')
 }
 
 // Toggles the completion status of a task with the specified ID.
@@ -142,16 +142,23 @@ function changeBtnColor(){
 // Displays a toast message with the specified message and background color.
 function showToast(message, color) {
     const toastContainer = document.getElementById('toast-container');
-    toastContainer.style.backgroundColor = color;
-    const toast = document.getElementById('toast');
-    toast.innerText = message
-    toastContainer.classList.remove('hidden');
-    toastContainer.classList.add('visible');
-    
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.style.backgroundColor = color;
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+
+    // Trigger a reflow to enable the transition
+    toast.offsetHeight;
+
+    toast.classList.add('show');
+    // Remove the toast after a certain time (e.g., 3 seconds)
     setTimeout(() => {
-        toastContainer.classList.remove('visible');
-        toastContainer.classList.add('hidden');
-    }, 3000); // Display the toast for 3 seconds
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
 }
 
 
